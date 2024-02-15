@@ -14,8 +14,8 @@ public class Main {
     public static void main(String[] args) throws IOException, SQLException {
         Scanner sc = new Scanner(System.in);
         boolean num = true;
-        Database.getDate();
-        
+        Database.getData();
+
         try {
             while (num == true) {
 
@@ -24,14 +24,16 @@ public class Main {
                 switch (answer) {
 
                     case "ano" -> {
-                        System.out.println("Zadejte jméno, příjmení a věk");
+                        System.out.println("Zadejte jméno");
                         String name =sc.nextLine();
+                        System.out.println("Zadejte příjmení");
                         String lastName = sc.nextLine();
+                        System.out.println("Zadejte věk");
                         int age = sc.nextInt();
                         Database.setData(name, lastName, age);
                         sc.nextLine();
                         System.out.println();
-                        Database.getDate();
+                        Database.getData();
                     }
                     case "ne" -> {
                         num = false;

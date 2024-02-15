@@ -2,7 +2,7 @@ import java.sql.*;
 
 public class Database {
 
-    public static void getDate() throws SQLException {
+    public static void getData() throws SQLException {
         Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/acc", "root", "");
         PreparedStatement statement = c.prepareStatement("SELECT * FROM users");
         ResultSet set = statement.executeQuery();
